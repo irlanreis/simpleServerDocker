@@ -6,9 +6,10 @@ const sequelize = new Sequelize(
   process.env.MYSQLUSER,
   process.env.MYSQLPASSWORD,
   {
+    host: process.env.MYSQLHOST, // <- isso aqui é crucial no Railway
     dialect: 'mysql',
     port: process.env.MYSQLPORT,
-    logging: false, // Desativa logs de SQL no console
+    logging: false,
   }
 );
 
