@@ -4,13 +4,13 @@ const User = require('./models/userModel');
 
 User.initModel(sequelize);
 
-const PORT = process.env.PORT || 3306;
+const PORT = process.env.PORT;
 
 sequelize.sync()
   .then(() => {
     console.log('Banco sincronizado!');
     app.listen(PORT, () => {
-      console.log('Server is running!');
+      console.log('Server is running on', PORT);
     });
   })
   .catch(err => {
