@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
-# Copia o restante dos arquivos
+# Copia o restante dos arquivos 
 COPY . .
 
 # Expõe a porta usada no app
