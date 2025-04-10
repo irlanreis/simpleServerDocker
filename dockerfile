@@ -15,4 +15,4 @@ COPY . .
 EXPOSE 3000
 
 # Comando para iniciar a aplicação
-CMD ["node", "src/server.js"]
+ENTRYPOINT ["/usr/src/app/docker-entrypoint.sh"]
